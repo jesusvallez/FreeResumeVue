@@ -14,6 +14,9 @@
   </b-container>
   <footer class="footer">
       <div class="text-center">
+        <small>You can download this project <a href="https://github.com/jesusvallez/FreeResumeVue" target="_blank">here</a></small>
+      </div>
+      <div class="text-center">
         <small>Designed by <a href="https://jesusvallez.github.io/" target="_blank">Jesús Vállez</a></small>
       </div>
       <div class="text-center">
