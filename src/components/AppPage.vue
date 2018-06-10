@@ -1,18 +1,18 @@
 <template>
-<div>
-  <b-container class="main-page">
-    <b-row class="page">
-      <b-col md="9" class="left-page">
-        <AppStory v-for="(item, value) in items" v-bind:item="item" v-bind:key="item.id" v-bind:index="value" />
-        <AppSkill v-bind:skills="skills"/>
-      </b-col>
-      <b-col md="3" class="bg-blue-color right-page no-padding">
-        <AppPublicInfo v-bind:publicInfo="publicInfo"/>
-        <AppPrivateInfo v-bind:privateInfo="privateInfo"/>
-      </b-col>
-    </b-row>
-  </b-container>
-  <footer class="footer">
+  <div>
+    <b-container class="main-page">
+      <b-row class="page">
+        <b-col md="9" class="left-page">
+          <AppStory v-for="(item, value) in items" v-bind:item="item" v-bind:key="item.id" v-bind:index="value" />
+          <AppSkill v-bind:skills="skills"/>
+        </b-col>
+        <b-col md="3" class="bg-blue-color right-page no-padding">
+          <AppPublicInfo v-bind:publicInfo="publicInfo"/>
+          <AppPrivateInfo v-bind:privateInfo="privateInfo"/>
+        </b-col>
+      </b-row>
+    </b-container>
+    <footer class="footer" v-bind:style="{ display: 'block' }">
       <div class="text-center">
         <small>You can download this project <a href="https://github.com/jesusvallez/FreeResumeVue" target="_blank">here</a></small>
       </div>
@@ -22,10 +22,8 @@
       <div class="text-center">
         <small>Powered by <a href="https://vuejs.org/" target="_blank">Vue.js 2</a></small>
       </div>
-
     </footer>
-</div>
-
+  </div>
 </template>
 
 <script>
@@ -116,21 +114,26 @@ export default {
           },
           {
             id: 3,
-            icon: ['fas', 'location-arrow'],
+            icon: ['fas', 'home'],
             title: 'Passeig Ceja, Las Fierro'
           },
           {
             id: 4,
+            icon: ['fas', 'plane'],
+            title: 'Lake Carlo, Heloise'
+          },
+          {
+            id: 5,
             icon: ['far', 'envelope'],
             title: 'aitoresteve@popsok.ml'
           },
           {
-            id: 5,
+            id: 6,
             icon: ['fab', 'linkedin-in'],
             title: 'linkedin.com/in/aitoresteve'
           },
           {
-            id: 6,
+            id: 7,
             icon: ['fab', 'github'],
             title: 'github.com/aitoresteve'
           }

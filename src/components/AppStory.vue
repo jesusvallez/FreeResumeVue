@@ -1,24 +1,24 @@
 <template>
-<div class="story">
-  <h2 v-if="getTittle()" class="title-resume blue-color">
-    <div class="text">
-      <font-awesome-icon :icon="icon" class="icon"/> {{ title }}
-    </div>
-  </h2>
-  <div class="item">
-    <div class="info">
-      <div class="story-title">
-          <h3 class="job-title"> {{ job }}</h3>
-          <div class="time">{{ time }}</div>
+  <div class="story">
+    <h2 v-if="getTittle()" class="title-resume blue-color">
+      <div class="text">
+        <font-awesome-icon :icon="icon" class="icon"/> {{ title }}
       </div>
-      <div class="company-details" v-html="company"></div>
-      <div class="company-page" v-html="page"></div>
-    </div>
-    <div class="details">
-      <p v-for="detail in details" v-bind:key="detail" v-html="detail"></p>
+    </h2>
+    <div class="item">
+      <div class="info">
+        <div class="story-title">
+            <h3 class="job-title"> {{ job }}</h3>
+            <div class="time">{{ time }}</div>
+        </div>
+        <div class="company-details" v-html="company"></div>
+        <div class="company-page" v-html="page"></div>
+      </div>
+      <div class="details">
+        <p v-for="detail in details" v-bind:key="detail" v-html="detail"></p>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>

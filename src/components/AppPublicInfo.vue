@@ -1,11 +1,11 @@
 <template>
-<div class="public-info bg-dark-blue-color">
-  <div class="text-center">
-    <img :src="getImage" class="rounded-circle profile-image" width="140" height="140" alt="cv"/>
+  <div class="public-info bg-dark-blue-color">
+    <div class="text-center">
+      <img :src="getImage" class="rounded-circle profile-image" width="140" height="140" alt="cv"/>
+    </div>
+    <h1 class="name text-center">{{ name }}</h1>
+    <h4 class="occupation text-center">{{ ocupation }}</h4>
   </div>
-  <h1 class="name text-center">{{ name }}</h1>
-  <h4 class="occupation text-center">{{ ocupation }}</h4>
-</div>
 </template>
 
 <script>

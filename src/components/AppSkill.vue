@@ -1,17 +1,17 @@
 <template>
-<div v-if="getAptitudes() > 0" class="skills">
-  <h2 v-if="getTittle()" class="title-resume">
-    <div class="text">
-      <font-awesome-icon :icon="icon" class="icon"/> {{ getTittle() }}
-    </div>
-  </h2>
-  <ul class="aptitudes">
-    <li v-for="(aptitude) in aptitudes" v-bind:key="aptitude.id" class="aptitude">
-      <div class="title-aptitude">{{ aptitude.title }}</div>
-      <div class="number-aptitude"><b-progress :value="aptitude.counter" variant="blue-color"></b-progress></div>
-    </li>
-  </ul>
-</div>
+  <div v-if="getAptitudes() > 0" class="skills">
+    <h2 v-if="getTittle()" class="title-resume">
+      <div class="text">
+        <font-awesome-icon :icon="icon" class="icon"/> {{ getTittle() }}
+      </div>
+    </h2>
+    <ul class="aptitudes">
+      <li v-for="(aptitude) in aptitudes" v-bind:key="aptitude.id" class="aptitude">
+        <div class="title-aptitude">{{ aptitude.title }}</div>
+        <div class="number-aptitude"><b-progress :value="aptitude.counter" variant="blue-color"></b-progress></div>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>

@@ -1,10 +1,10 @@
 <template>
-<div class="private-info">
-    <div v-for="(contact) in contacts" v-bind:key="contact.id" class="contact">
-      <div class="div-icon"><font-awesome-icon :icon="contact.icon" class="icon"/></div>
-      <div class="div-text">{{ contact.title }}</div>
-    </div>
-</div>
+  <div class="private-info">
+      <div v-for="(contact) in contacts" v-bind:key="contact.id" class="contact">
+        <div class="div-icon"><font-awesome-icon :icon="contact.icon" class="icon"/></div>
+        <div class="div-text" v-html="contact.title"></div>
+      </div>
+  </div>
 </template>
 
 <script>
@@ -31,6 +31,14 @@ export default {
 </script>
 
 <style>
+
+.div-text > a:hover {
+  color: #ccc;
+}
+.div-text > a {
+  color: #fff;
+}
+
 .private-info {
   display: grid;
   justify-content: center;
